@@ -28,7 +28,7 @@ const Favorite = () => {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("No token found");
 
-      await axios.delete(`http://localhost:3000/favorites/${recipeId}`, {
+      await axios.delete(`https://foodrecipe-fullstack.onrender.com/favorites/${recipeId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
