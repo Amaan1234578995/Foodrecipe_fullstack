@@ -12,7 +12,7 @@ const MyRecipes = () => {
         const token = localStorage.getItem("token");
         if (!token) throw new Error("No token found");
 
-        const response = await axios.get("https://foodrecipe-fullstack.onrender.com/my-recipes", {
+        const response = await axios.get("https://backend-gzxo.onrender.com/my-recipes", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -30,7 +30,7 @@ const MyRecipes = () => {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("No token found");
 
-      await axios.delete(`https://foodrecipe-fullstack.onrender.com/recipes/${recipeId}`, {
+      await axios.delete(`https://backend-gzxo.onrender.com/recipes/${recipeId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
