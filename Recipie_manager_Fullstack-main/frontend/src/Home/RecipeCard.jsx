@@ -8,7 +8,7 @@ function RecipeCard() {
 
   useEffect(() => {
     axios
-      .get(`https://foodrecipe-fullstack.onrender.com/recipes/${id}`)
+      .get(`https://backend-gzxo.onrender.com/recipes/${id}`)
       .then((response) => {
         console.log("Fetched data:", response.data);
         setRecipe(response.data);
