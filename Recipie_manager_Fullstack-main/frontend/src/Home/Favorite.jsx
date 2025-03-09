@@ -10,7 +10,7 @@ const Favorite = () => {
         const token = localStorage.getItem("token");
         if (!token) throw new Error("No token found");
 
-        const response = await axios.get("http://localhost:3000/favorites", {
+        const response = await axios.get("https://foodrecipe-fullstack.onrender.com/favorites", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
