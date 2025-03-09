@@ -14,7 +14,7 @@ export const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://foodrecipe-fullstack.onrender.com/login', { email, password });
+      const response = await axios.post('https://backend-gzxo.onrender.com/login', { email, password });
 
       if (response.data.token) {
         localStorage.setItem('token', response.data.token); // Save token
