@@ -10,7 +10,7 @@ const Favorite = () => {
         const token = localStorage.getItem("token");
         if (!token) throw new Error("No token found");
 
-        const response = await axios.get("https://foodrecipe-fullstack.onrender.com/favorites", {
+        const response = await axios.get("https://backend-gzxo.onrender.com/favorites", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -28,7 +28,7 @@ const Favorite = () => {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("No token found");
 
-      await axios.delete(`https://foodrecipe-fullstack.onrender.com/favorites/${recipeId}`, {
+      await axios.delete(`https://backend-gzxo.onrender.com/favorites/${recipeId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
